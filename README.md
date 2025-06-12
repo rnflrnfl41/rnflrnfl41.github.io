@@ -12,39 +12,23 @@
 
 ### ✅ 개발 서버 실행
 
-npm install
-npm run dev
-
-- 개발 중에는 루트(index.html)를 사용합니다.
-- public 폴더는 정적 자산 전용입니다.
+``npm run dev``
 
 ---
 
 ## 🚀 배포 (GitHub Pages)
 
-### 1. index.html 복사
+### 1. 빌드
 
-빌드 전에 루트의 index.html을 public/index.html로 복사해야 합니다.
-
-Windows:
-copy index.html public\index.html
-
-macOS / Linux:
-cp index.html public/index.html
-
----
-
-### 2. 빌드
-
-npm run build
+``npm run build``
 
 (dist 폴더에 결과 생성)
 
 ---
 
-### 3. GitHub Pages 배포
+### 2. GitHub Pages 배포
 
-npm run deploy
+``npm run deploy``
 
 (gh-pages 패키지를 사용하여 dist/를 gh-pages 브랜치에 배포)
 
@@ -54,14 +38,11 @@ npm run deploy
 
 ```json
 "scripts": {
-  "copy-index": "copy index.html public\\index.html",
-  "build": "npm run copy-index && vite build",
+  "build": "vite build",
   "deploy": "gh-pages -d dist",
   "dev": "vite"
 }
 ```
-
-(mac 사용자는 copy-index를 cp index.html public/index.html 로 변경)
 
 ---
 
@@ -73,6 +54,7 @@ npm install --save-dev gh-pages
 
 ## 🛠 vite.config.js 설정
 
+```bash
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -80,6 +62,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/rnflrnfl41.github.io/' // 본인 GitHub 저장소명으로 수정
 })
+```
 
 ---
 
@@ -93,13 +76,11 @@ export default defineConfig({
 
 ## 📁 폴더 구조
 
-```bash
+```
 my-portfolio/
-├── public/
-│   └── index.html (복사된 배포용)
 ├── src/
 │   └── main.jsx
-├── index.html (개발용)
+├── index.html
 ├── package.json
 └── vite.config.js
 ```
@@ -110,6 +91,12 @@ my-portfolio/
 
 문제가 생기면 아래 명령어 순서대로 점검하세요:
 
+```
 npm run dev
 npm run build
 npm run deploy
+```
+```
+dev 주소: http://localhost:5173/rnflrnfl41.github.io/
+라이브 주소: https://rnflrnfl41.github.io/
+```
