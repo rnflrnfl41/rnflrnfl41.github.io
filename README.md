@@ -52,12 +52,14 @@ npm run deploy
 
 ## ⚙ package.json 예시
 
+```json
 "scripts": {
   "copy-index": "copy index.html public\\index.html",
   "build": "npm run copy-index && vite build",
   "deploy": "gh-pages -d dist",
   "dev": "vite"
 }
+```
 
 (mac 사용자는 copy-index를 cp index.html public/index.html 로 변경)
 
@@ -91,6 +93,7 @@ export default defineConfig({
 
 ## 📁 폴더 구조
 
+```bash
 my-portfolio/
 ├── public/
 │   └── index.html (복사된 배포용)
@@ -99,6 +102,7 @@ my-portfolio/
 ├── index.html (개발용)
 ├── package.json
 └── vite.config.js
+```
 
 ---
 
