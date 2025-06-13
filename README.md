@@ -1,6 +1,7 @@
 # 김한빈 포트폴리오
 
-> Vite + React 기반 포트폴리오 웹사이트입니다.
+> Vite + React 기반 포트폴리오 웹사이트입니다.  
+> 주소: https://rnflrnfl41.github.io/
 
 ---
 
@@ -60,7 +61,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/rnflrnfl41.github.io/' // 본인 GitHub 저장소명으로 수정
+  base: '/' // 본인 GitHub 저장소명으로 수정 (따로 저장소 = 주소 라면 root 이용하는 경우 -> '/')
 })
 ```
 
@@ -95,8 +96,4 @@ my-portfolio/
 npm run dev
 npm run build
 npm run deploy
-```
-```
-dev 주소: http://localhost:5173/rnflrnfl41.github.io/
-라이브 주소: https://rnflrnfl41.github.io/
 ```
